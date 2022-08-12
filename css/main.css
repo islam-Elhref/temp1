@@ -1,5 +1,8 @@
 /*********Start************  variable  ******************بسم الله********/
-
+:root{
+    --main-color:#10cab7;
+    --main-color-p:#395360;
+}
 /******** End  ************  variable  ******************الحمد لله********/
 /*********Start************  Global rules  ******************بسم الله********/
 * {
@@ -58,6 +61,7 @@ body {
 
 .header .links{ /*true*/
     position: relative;
+    z-index: 999;
 }
 .header .links:hover .icon span:nth-child(2){
     width: 100%;
@@ -81,18 +85,91 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+/*start lesson 4*/
 
 .header .links .dropdown{
-    position: absolute;
-    list-style: none;
-    background: #f6f6f6;
+    position: absolute; /*true*/
+    list-style: none; /*true*/
+    background: #f6f6f6; /*true*/
+    margin: 0; /*true*/
+    padding: 0; /*true*/
+    min-width: 200px; /*true*/
+    right: 0; /*true*/
+    top: calc(100% + 15px); /*true*/
+    display: none; /*true*/
 }
-.header .links .dropdown li{
-    border-bottom: #ddd;
-    color: #333;
-    padding: 15px;
-/*    sadas*/
+.header .links:hover .dropdown{
+    display: block; /*true*/
+}
+.header .links .dropdown:before{
+    content: ''; /*true*/
+    position: absolute; /*true*/
+    right: 5px; /*true*/
+    top: -20px; /*true*/
+    border: 10px solid transparent; /*true*/
+    border-bottom-color: #f6f6f6; /*true*/
+}
+
+.header .links .dropdown a{
+    display: block; /*true*/
+    padding: 15px; /*true*/
+    text-decoration: none; /*true*/
+    color: #333; /*true*/
+    transition: 0.3s; /*true*/
+}
+.header .links .dropdown a:hover{
+    padding-left: 25px; /*true*/
+}
+.header .links .dropdown li:not(:last-child) a{
+    border-bottom: 1px solid #ddd; /*true*/
+}
+
+/*End lesson 4*/
+
+.landing{
+    background: url(../img/background.jpg); /*true*/
+    background-size: cover;  /*true*/
+    height: calc(100vh - 64px);  /*true*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    position: relative; /*true*/
 }
 
 
+/*.landing:before{*/
+/*    content: '';*/
+/*    background: url(../img/background.jpg);*/
+/*    background-size: cover;*/
+/*    opacity: 0.7;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    position: absolute;*/
+/*    filter: blur(1px);*/
+/*    z-index: -1;*/
+/*}*/
+ /*before*/
 
+.landing .text-intro{
+    position: absolute; /*true*/
+    top: 50%; /*true*/
+    left: 50%; /*true*/
+    transform: translate(-50% , -50%); /*true*/
+    text-align: center;
+    width: 400px; /*true*/
+    max-width: 99%; /*true*/
+}
+.landing .text-intro h1{
+    color: var(--main-color);
+    margin: 0; /*true*/
+    font-weight: bold;
+    font-size: 50px;
+}
+.landing .text-intro p{
+    color: var(--main-color-p);
+    font-size: 19px;
+    line-height: 1.6;
+
+}
