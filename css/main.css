@@ -1,0 +1,97 @@
+/*********Start************  variable  ******************بسم الله********/
+
+/******** End  ************  variable  ******************الحمد لله********/
+/*********Start************  Global rules  ******************بسم الله********/
+* {
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
+/******** End  ************  Global rules  ******************الحمد لله********/
+.header{ /*true*/
+    padding: 20px;
+}
+.header .container{ /*true*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo { /*true*/
+    width: 60px;
+}
+
+.header .links{ /*true*/
+    position: relative;
+}
+.header .links:hover .icon span:nth-child(2){
+    width: 100%;
+}
+
+.header .links .icon{ /*true*/
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.header .links .icon span{ /*true*/
+    width: 100%;
+    height: 3px;
+    background: black;
+    margin-bottom: 3px;
+}
+
+.header .links .icon span:nth-child(2){
+    width: 60%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.header .links .dropdown{
+    position: absolute;
+    list-style: none;
+    background: #f6f6f6;
+}
+.header .links .dropdown li{
+    border-bottom: #ddd;
+    color: #333;
+    padding: 15px;
+}
+
+
+
