@@ -1,8 +1,12 @@
 /*********Start************  variable  ******************بسم الله********/
-:root{
-    --main-color:#10cab7;
-    --main-color-p:#395360;
+:root {
+    --main-color: #10cab7;
+    --main-color-p: #395360;
+    --secondry-color: #2c4755;
+    --line-height:1.8;
+    --font-size-p:17px;
 }
+
 /******** End  ************  variable  ******************الحمد لله********/
 /*********Start************  Global rules  ******************بسم الله********/
 * {
@@ -10,6 +14,10 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,31 +34,73 @@ body {
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-    .container{
+    .container {
         width: 750px;
     }
 }
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-    .container{
+    .container {
         width: 970px;
     }
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-    .container{
+    .container {
         width: 1170px;
     }
 }
 
 /******** End  ************  Global rules  ******************الحمد لله********/
-.header .parent-header{ /*true*/
+/*start component*/
+
+.cat-padding {
+    padding-top: 60px; /*true*/
+    padding-bottom: 60px; /*true*/
+}
+
+.special-heading {
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+.special-heading *:first-child {
+    text-align: center; /*true*/
+    font-size: 2em; /*true*/
+    font-weight: 800; /*true*/
+    letter-spacing: -3px; /*true*/
+    color: #ebeced; /*true*/
+    margin: 0; /*true*/
+}
+
+.special-heading *:first-child + p {
+    text-align: center; /*true*/
+    font-size: 0.3em; /*true*/
+    margin: -30px 0 0 0; /*true*/
+    color: #797979; /*true*/
+}
+
+@media (max-width: 767px) {
+    .special-heading{
+        font-size: 30px;
+    }
+    .special-heading *:first-child + p {
+        font-size: 0.32em;
+        margin-top: -25px; /*true*/
+
+    }
+}
+
+/*end component*/
+
+.header .parent-header { /*true*/
     padding-bottom: 20px;
     padding-top: 20px;
 }
-.header .parent-header{ /*true*/
+
+.header .parent-header { /*true*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,35 +110,37 @@ body {
     width: 60px;
 }
 
-.header .links{ /*true*/
+.header .links { /*true*/
     position: relative;
     z-index: 999;
 }
-.header .links:hover .icon span:nth-child(2){
+
+.header .links:hover .icon span:nth-child(2) {
     width: 100%;
 }
 
-.header .links .icon{ /*true*/
+.header .links .icon { /*true*/
     width: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
 }
-.header .links .icon span{ /*true*/
+
+.header .links .icon span { /*true*/
     width: 100%;
     height: 3px;
     background: black;
     margin-bottom: 3px;
 }
 
-.header .links .icon span:nth-child(2){
+.header .links .icon span:nth-child(2) {
     width: 60%;
     transition: all 0.3s ease-in-out;
 }
 
 /*start lesson 4*/
 
-.header .links .dropdown{
+.header .links .dropdown {
     position: absolute; /*true*/
     list-style: none; /*true*/
     background: #f6f6f6; /*true*/
@@ -99,10 +151,12 @@ body {
     top: calc(100% + 15px); /*true*/
     display: none; /*true*/
 }
-.header .links:hover .dropdown{
+
+.header .links:hover .dropdown {
     display: block; /*true*/
 }
-.header .links .dropdown:before{
+
+.header .links .dropdown:before {
     content: ''; /*true*/
     position: absolute; /*true*/
     right: 5px; /*true*/
@@ -111,46 +165,50 @@ body {
     border-bottom-color: #f6f6f6; /*true*/
 }
 
-.header .links .dropdown a{
+.header .links .dropdown a {
     display: block; /*true*/
     padding: 15px; /*true*/
     text-decoration: none; /*true*/
     color: #333; /*true*/
     transition: 0.3s; /*true*/
 }
-.header .links .dropdown a:hover{
+
+.header .links .dropdown a:hover {
     padding-left: 25px; /*true*/
 }
-.header .links .dropdown li:not(:last-child) a{
+
+.header .links .dropdown li:not(:last-child) a {
     border-bottom: 1px solid #ddd; /*true*/
 }
 
 /*End lesson 4*/
 /* start lesson 5*/
 
-.landing{
+.landing {
     background: url("../img/background.jpg"); /*true*/
     background-size: cover; /*true*/
     height: calc(100vh - 64px);
     position: relative;
 }
 
-.landing .text-intro{
+.landing .text-intro {
     position: absolute; /*true*/
     top: 50%; /*true*/
     left: 50%; /*true*/
-    transform: translate(-50% , -50%); /*true*/
+    transform: translate(-50%, -50%); /*true*/
     text-align: center; /*true*/
     width: 400px;
     max-width: 99%;
 }
-.landing .text-intro h1{
+
+.landing .text-intro h1 {
     margin: 0; /*true*/
     font-size: 50px; /*true*/
     font-weight: bold; /*true*/
     color: var(--main-color); /*true*/
 }
-.landing .text-intro p{
+
+.landing .text-intro p {
     color: var(--main-color-p); /*true*/
     font-size: 19px; /*true*/
     line-height: 1.8; /*true*/
@@ -159,32 +217,105 @@ body {
 /* end lesson 5*/
 /*start lesson 6*/
 
-.features{
-    padding-top: 60px; /*true*/
-    padding-bottom: 60px; /*true*/
+.features {
     background: #f6f6f6; /*true*/
 }
 
-.features .container{
+.features .container {
     display: grid; /*true*/
-    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr)); /*true*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*true*/
     gap: 20px; /*true*/
 }
-.features .feat{
+
+.features .feat {
     padding: 20px; /*true*/
     text-align: center; /*true*/
 }
-.features .feat i{
+
+.features .feat i {
     color: var(--main-color); /*true*/
 }
-.features .feat h3{
+
+.features .feat h3 {
     font-weight: 800; /*true*/
     margin: 30px 0; /*true*/
 }
-.features .feat p{
-    line-height: 1.8;/*true*/
-    font-size: 17px;/*true*/
-    color: #777;/*true*/
+
+.features .feat p {
+    line-height: var(--line-height); /*true*/
+    font-size: var(--font-size-p); /*true*/
+    color: var(--main-color-p); /*true*/
 }
+
 /*end lesson 6*/
 
+/* start services */
+
+.services-content {
+    display: grid; /*true*/
+    gap: 30px; /*true*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*true*/
+}
+
+
+.services-content .service {
+    display: flex; /*true*/
+    margin-bottom: 40px; /*true*/
+}
+
+@media (max-width: 767px) {
+    .services-content .service {
+        flex-direction: column; /*true*/
+        text-align: center; /*true*/
+    }
+
+}
+
+.services-content .service i{
+    color: var(--main-color); /*true*/
+    flex-basis: 60px; /*true*/
+}
+
+.services-content .service .head-service{
+    flex-basis: 0; /*true*/
+    flex-grow: 1; /*true*/
+    height: 175px;
+}
+
+.services-content .service .head-service h3{
+    margin: 0 0 20px 0; /*true*/
+}
+
+.services-content .service .head-service p{
+    color: var(--main-color-p); /*true*/
+    line-height: var(--line-height); /*true*/
+    font-size: var(--font-size-p); /*true*/
+}
+.services-content .image{
+    width: 360px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-58%, -0%);
+}
+.services-content .image img{
+    width: 300px;
+}
+.services-content .image:before{
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: -1;
+    background: var(--secondry-color);
+    width: 100px;
+    height: calc(100% + 100px);
+}
+
+@media (max-width: 1199px ) {
+    .image-column{
+        display: none;
+    }
+}
+
+/* end services */
