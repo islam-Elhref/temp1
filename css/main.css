@@ -1,5 +1,6 @@
 /*********Start************  variable  ******************بسم الله********/
 :root {
+    --section-background:#f6f6f6;
     --main-color: #10cab7;
     --main-color-p: #395360;
     --secondry-color: #2c4755;
@@ -251,71 +252,99 @@ body {
 
 /* start services */
 
-.services-content {
-    display: grid; /*true*/
-    gap: 30px; /*true*/
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*true*/
-}
-
-
-.services-content .service {
+.services .services-content{
     display: flex; /*true*/
-    margin-bottom: 40px; /*true*/
+    gap: 30px; /*true*/
+}
+.services .services-content section:first-child{
+    display: grid; /*true*/
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr )); /*true*/
+    gap: 30px; /*true*/
 }
 
-@media (max-width: 767px) {
-    .services-content .service {
+
+.services .services-content section .image{
+    text-align: center; /*zero*/
+    position: relative;/*true*/
+}
+.services .services-content section .image:before{
+    content: ''; /*true*/
+    width: 100px;  /*me 80 zero 100px*/
+    height: calc(100% + 100px); /*true*/
+    position: absolute; /*true*/
+    top: -50px; /*true*/
+    right: 0; /*zero make 0 me 20*/
+    background: var(--secondry-color); /*true*/
+    z-index: -1; /*true*/
+}
+.services .services-content section .image img{
+    width: 260px; /*zero 260 me 300*/
+}
+.services .services-content .service{
+    display: flex; /*true*/
+    margin-bottom: 40px ; /*true*/
+    /*height: 270px;*/
+}
+@media (max-width: 767px) { /*me put 676 and zero 767px*/
+    .services .services-content .service {
         flex-direction: column; /*true*/
         text-align: center; /*true*/
     }
-
 }
 
-.services-content .service i{
-    color: var(--main-color); /*true*/
-    flex-basis: 60px; /*true*/
-}
-
-.services-content .service .head-service{
-    flex-basis: 0; /*true*/
-    flex-grow: 1; /*true*/
-    height: 175px;
-}
-
-.services-content .service .head-service h3{
-    margin: 0 0 20px 0; /*true*/
-}
-
-.services-content .service .head-service p{
-    color: var(--main-color-p); /*true*/
-    line-height: var(--line-height); /*true*/
-    font-size: var(--font-size-p); /*true*/
-}
-.services-content .image{
-    width: 360px;
-    text-align: center;
-    position: relative;
-    left: 50%;
-    transform: translate(-58%, -0%);
-}
-.services-content .image img{
-    width: 300px;
-}
-.services-content .image:before{
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: 0;
-    z-index: -1;
-    background: var(--secondry-color);
-    width: 100px;
-    height: calc(100% + 100px);
-}
-
-@media (max-width: 1199px ) {
-    .image-column{
-        display: none;
+@media (max-width: 1199px) {
+    .services .services-content section:last-child{
+        display: none; /*true*/
     }
 }
 
+.services .services-content .service i{
+    flex-basis:60px; /*true*/
+    color: var(--main-color); /*true*/
+}
+
+
+.services .services-content .service .service-header{
+    flex: 1; /*true*/
+}
+.services .services-content .service .service-header h3{
+    font-weight: 800;
+    margin: 0 0 20px; /*true*/
+}
+.services .services-content .service .service-header p{
+    color: var(--main-color-p); /*true*/
+    font-weight: 300; /*true*/
+    line-height: var(--line-height);  /*true*/
+    font-size: var(--font-size-p); /*true*/
+}
 /* end services */
+/*start portfolio*/
+.portfolio{
+    background: var(--section-background); /*true*/
+}
+.portfolio-content{
+    display: grid; /*true*/
+    grid-template-columns: repeat(auto-fill , minmax(300px, 1fr));/*true*/
+    gap: 30px;/*true*/
+}
+.portfolio-content .card {
+    background: white ; /*true*/
+}
+.portfolio-content .card img{
+    max-width: 100%; /*true*/
+}
+.portfolio-content .card .info{
+    padding: 20px; /*true*/
+}
+.portfolio-content .card .info h3{
+    font-weight: 800;
+    margin: 0; /*true*/
+}
+.portfolio-content .card .info p{
+    color: var(--main-color-p); /*true*/
+    font-size: var(--font-size-p); /*true*/
+    line-height: var(--line-height); /*true*/
+    font-weight: 300;
+    margin-bottom: 0; /*true*/
+}
+/*end portfolio*/

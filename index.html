@@ -38,7 +38,8 @@
                     <span></span>
                 </div>
                 <ul class="dropdown">
-                    <li><a href="#features">services</a></li>
+                    <li><a href="#features">features</a></li>
+                    <li><a href="#services">services</a></li>
                     <li><a href="#Portfolio">Portfolio</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Contact">Contact</a></li>
@@ -78,33 +79,29 @@
 </div>
 <!--end features-->
 
-<!-- start services -->
-
-<div class="services cat-padding">
+<!-- start serv -->
+<div class="services cat-padding" id="services">
     <div class="container">
-        <!-- start special heading -->
         <div class="special-heading">
             <h2>services</h2>
             <p>Don't be busy, be productive</p>
         </div>
-        <!-- start services content -->
         <div class="services-content">
             <section>
-                <div class="service">
-                    <i class="fa fa-palette fa-2x" ></i>
-                    <div class="head-service">
-                        <h3>graphic design</h3>
+                <div class="service" style="order: 1" >
+                    <i class="fa fa-print fa-2x"></i>
+                    <div class="service-header">
+                        <h3>Graphic Design</h3>
                         <p>
                             Graphic design is the process of visual
                             communication and problem-solving
                             using one or more of typography,
-                            photography and illustration.
-                        </p>
+                            photography and illustration.</p>
                     </div>
                 </div>
-                <div class="service">
-                    <i class="fab fa-sketch fa-2x"></i>
-                    <div class="head-service">
+                <div class="service" style="order: 3">
+                    <i class="fa fa-message fa-2x"></i>
+                    <div class="service-header">
                         <h3>UI & UX</h3>
                         <p>
                             Process of enhancing user satisfaction
@@ -114,12 +111,10 @@
                         </p>
                     </div>
                 </div>
-            </section>
-            <section>
-                <div class="service">
-                    <i class="fa fa-server fa-2x"></i>
-                    <div class="head-service">
-                        <h3>Web design</h3>
+                <div class="service" style="order: 2">
+                    <i class="fa-brands fa-css3-alt fa-2x"></i>
+                    <div class="service-header">
+                        <h3>Web Design</h3>
                         <p>
                             Web design encompasses many different
                             skills and disciplines in the production
@@ -127,9 +122,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="service">
-                    <i class="fab fa-screenpal fa-2x"></i>
-                    <div class="head-service">
+                <div class="service" style="order: 4">
+                    <i class="fa fa-display fa-2x"></i>
+                    <div class="service-header">
                         <h3>Web Development</h3>
                         <p>
                             Web development is a broad term for
@@ -140,16 +135,48 @@
                 </div>
             </section>
             <section>
-                <div class="image image-column">
+                <div class="image">
                     <img src="img/servieces.jpg" alt="">
                 </div>
             </section>
         </div>
-
     </div>
 </div>
-
-<!-- end services -->
+<!-- end serv -->
+<div class="portfolio cat-padding" id="portfolio">
+    <div class="container">
+        <div class="special-heading">
+            <h2>portfolio</h2>
+            <p>If you do it right, it will last forever.</p>
+        </div>
+        <div class="portfolio-content">
+            <div class="card">
+                <img src="img/portfolio-1.jpg" alt="">
+                <div class="info">
+                    <h3>Project Here</h3>
+                    <p>My creative ability is very difficult to measure because it can
+                        manifest in so many surprising  and.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/portfolio-2.jpg" alt="">
+                <div class="info">
+                    <h3>Project Here</h3>
+                    <p>My creative ability is very difficult to measure because it can
+                        manifest in so many surprising and.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/portfolio-3.jpg" alt="">
+                <div class="info">
+                    <h3>Project Here</h3>
+                    <p>My creative ability is very difficult to measure because it can
+                        manifest in so many surprising and.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 
